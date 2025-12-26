@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>ส่งให้เมธาวี</title>
+
+<style>
+    body{
+        background-color: pink;
+        text-align: center;
+        font-family: Arial;
+    }
+
+    h1{
+        color: red;
+    }
+
+    .btn{
+        padding: 10px 20px;
+        font-size: 18px;
+        margin: 10px;
+        border-radius: 10px;
+        cursor: pointer;
+    }
+</style>
+</head>
+
+<body>
+
+<h1> รักแฟนนน่าาา</h1>
+
+<p>ขอบคุณที่อยู่ด้วยกัน</p>
+
+<h2 id="days"></h2>
+
+<br>
+
+<p>รักเราไหม?</p>
+
+<button class="btn" onclick="alert('แฟนรักเขินวะ🥰')">รัก</button>
+
+<button class="btn" id="noBtn">ไม่รัก</button>
+
+<script>
+    // ทำให้ปุ่ม "ไม่รัก" หนี
+    const noBtn = document.getElementById("noBtn");
+    noBtn.onmouseover = function(){
+        noBtn.style.position = "absolute";
+        noBtn.style.top = Math.random()*400 + "px";
+        noBtn.style.left = Math.random()*800 + "px";
+    }
+
+    // นับวันครบรอบ
+    const startDate = new Date("2025-11-11"); // <--- เปลี่ยนเป็นวันที่คบกัน
+    const today = new Date();
+    const diffTime = today - startDate;
+    const diffDays = Math.floor(diffTime / (1000*60*60*24));
+
+    document.getElementById("days").innerHTML =
+        "เราอยู่ด้วยกันมาแล้ว " + diffDays + " วัน 💕";
+</script>
+
+</body>
+</html>
